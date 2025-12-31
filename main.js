@@ -50,10 +50,10 @@ async function deleteProduct(id) {
   await db.run('DELETE FROM product WHERE id = ?', [id]);
 }
 
+
 async function getProductById(id) {
-  const connection = await getConnection();
-  const results = await connection.query('SELECT * FROM product WHERE id = ?', [id]);
-  return results[0];
+  const db = await getConnection();
+  return await db.get('SELECT * FROM product WHERE id = ?', [id]);
 }
 
 function createWindow() {

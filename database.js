@@ -1,17 +1,20 @@
+const { app } = require('electron');
+const path = require('path');
 const sqlite3 = require('sqlite3').verbose();
 const { open } = require('sqlite');
-const path = require('path');
 
 let db;
 
 async function getConnection() {
   if (!db) {
+    // dossier sûr pour le .exe
+    const dbPath = path.join(app.getPath('userData'), 'electron_crud_db.sqlite');
+
     db = await open({
-      filename: path.join(__dirname, 'electron_crud_db.sqlite'),
+      filename: dbPath,
       driver: sqlite3.Database
     });
 
-    // Crée la table product si elle n'existe pas
     await db.run(`
       CREATE TABLE IF NOT EXISTS product (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
