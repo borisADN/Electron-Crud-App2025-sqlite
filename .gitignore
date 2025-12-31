@@ -1,0 +1,55 @@
+# Dépendances
+node_modules/
+
+# Build / distributions Electron
+dist/
+build/
+out/
+release/
+releases/
+
+# Cache Electron & outils
+.cache/
+.tmp/
+.temp/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environnements
+.env
+.env.local
+.env.production
+.env.development
+
+# OS
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDE / éditeurs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Electron spécifique
+*.asar
+*.exe
+*.dmg
+*.AppImage
+*.snap
+*.deb
+*.rpm
+
+# Coverage / tests
+coverage/
+
+# TypeScript (si utilisé)
+*.tsbuildinfo

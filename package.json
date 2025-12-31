@@ -1,0 +1,49 @@
+{
+  "name": "crud_app_mysql",
+  "version": "1.0.0",
+  "description": "Electron CRUD App with MySQL",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^39.2.7",
+    "electron-builder": "^26.0.12"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "bootstrap": "^5.3.8",
+    "electron-reload": "^2.0.0-alpha.1",
+    "mysql2": "^3.16.0",
+    "promise-mysql": "^5.2.0",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7"
+  },
+  "build": {
+    "appId": "com.yourname.crudapp",
+    "productName": "ElectronCRUD",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "main.js",
+      "preload.js",
+      "app.js",
+      "index.js",
+      "package.json",
+      "database.js",
+      "electron_crud_db.sqlite",
+      "/assets/**/*"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "/assets/icon.ico"
+    }
+  }
+}

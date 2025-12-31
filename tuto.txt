@@ -1,0 +1,5 @@
+npm i MySQL2 promise MySQL electron-reload
+
+animate.css pour les animations
+
+npm run build
